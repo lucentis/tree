@@ -1,0 +1,42 @@
+:root {
+    --tree-font-heading: 'Iowan Old Style', 'Palatino Linotype', Palatino,
+      Georgia, serif;
+  
+    --vp-c-brand-1: #2c6a3e;
+    --vp-c-brand-2: #3a7d4f;
+    --vp-c-brand-3: #34724a;
+    --vp-c-brand-soft: rgb(44 106 62 / 0.14);
+  
+    --vp-c-bg: #fbfaf6;
+    --vp-c-bg-alt: #f3f1e8;
+    --vp-c-bg-elv: #fbfaf6;
+    --vp-c-bg-soft: #f3f1e8;
+    --vp-c-divider: #e4e0d2;
+    --vp-c-gutter: #e4e0d2;
+  }
+  
+  .dark {
+    --vp-c-brand-1: #7fc596;
+    --vp-c-brand-2: #5aa874;
+    --vp-c-brand-3: #3f8a56;
+    --vp-c-brand-soft: rgb(95 175 120 / 0.16);
+  
+    --vp-c-bg: #1a1c19;
+    --vp-c-bg-alt: #151714;
+    --vp-c-bg-elv: #20231f;
+    --vp-c-bg-soft: #20231f;
+    --vp-c-divider: #2f332d;
+  }
+  
+  .vp-doc h1,
+  .vp-doc h2,
+  .vp-doc h3,
+  .tree-grid h1,
+  .tree-grid h2,
+  .VPNavBarTitle .title {
+    font-family: var(--tree-font-heading);
+  }
+  
+  .vp-doc img {
+    border-radius: 8px;
+  }
