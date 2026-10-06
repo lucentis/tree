@@ -1,35 +1,32 @@
 import { defineConfig } from 'vitepress';
+import { trees, groupLabels, type TreeGroup } from './trees';
+
+const sidebarGroups = (Object.keys(groupLabels) as TreeGroup[]).map(
+  (group) => ({
+    text: groupLabels[group],
+    items: trees
+      .filter((tree) => tree.group === group)
+      .map((tree) => ({ text: tree.name, link: `/arbres/${tree.slug}` })),
+  }),
+);
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
-  lang: 'en-US',
-  title: 'VitePress',
-  description: 'Vite & Vue powered static site generator.',
+  lang: 'fr-FR',
+  title: 'Reconnaître les arbres',
+  description: 'Guide pour identifier les arbres les plus courants en France.',
+  cleanUrls: true,
 
   themeConfig: {
-    nav: [
-      { text: 'Example', link: '/example' },
+    nav: [{ text: 'Arbres', link: '/' }],
 
-      // {
-      //   text: 'Dropdown Menu',
-      //   items: [
-      //     { text: 'Item A', link: '/item-1' },
-      //     { text: 'Item B', link: '/item-2' },
-      //     { text: 'Item C', link: '/item-3' },
-      //   ],
-      // },
+    sidebar: {
+      '/arbres/': sidebarGroups,
+    },
 
-      // ...
-    ],
+    search: { provider: 'local' },
 
-    sidebar: [
-      {
-        // text: 'Guide',
-        items: [
-          { text: 'Example', link: '/example' },
-          // ...
-        ],
-      },
-    ],
+    docFooter: { prev: 'Précédent', next: 'Suivant' },
+    outline: false,
   },
 });
