@@ -12,11 +12,7 @@
 
 ## En images
 
-![Feuille de chêne](/trees/chene/leaf.jpg)
-
-![Écorce de chêne](/trees/chene/bark.jpg)
-
-![Gland de chêne](/trees/chene/fruit.jpg)
+<TreePhotos slug="chene" />
 
 ## Ne pas confondre avec
 
